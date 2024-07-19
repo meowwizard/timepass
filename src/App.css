@@ -1,84 +1,23 @@
+/* src/styles/App.css */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
 }
 
-header, footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-
-header ul, footer p {
-  margin: 0;
-  padding: 0;
-}
-
-header ul {
-  list-style: none;
+.layout {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
 }
 
-header ul li {
-  margin: 0 1rem;
-}
-
-header ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-header ul li a:hover {
-  text-decoration: underline;
-}
-
-aside {
-  background-color: #e9e9e9;
+.main-content {
+  flex: 1;
   padding: 1rem;
-  width: 200px;
-  float: left;
 }
 
-aside ul {
-  list-style: none;
-  padding: 0;
-}
-
-aside ul li {
-  margin-bottom: 1rem;
-}
-
-aside ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-aside ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  margin-left: 220px;
-  padding: 2rem;
-  background-color: white;
-}
-
-main h1, main h2 {
-  color: #333;
-}
-
-main pre {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  overflow-x: auto;
-}
-
-main img {
-  max-width: 100%;
-  margin-bottom: 2rem;
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
 }

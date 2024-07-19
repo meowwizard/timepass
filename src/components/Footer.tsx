@@ -1,9 +1,11 @@
+// src/components/Footer.tsx
 import React from 'react';
+import './Footer.css';
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <p>&copy; 2024 Pokedex Documentation. All rights reserved.</p>
+    <footer className="footer">
+      <p>&copy; 2024 Pokedex Simulator. All rights reserved.</p>
     </footer>
   );
 };

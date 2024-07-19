@@ -1,20 +1,29 @@
 import React from 'react';
+import Card from '../components/Card';
 
 const Features: React.FC = () => {
   return (
-    <main>
+    <div className="features-page">
       <h1>Features</h1>
-      <ul>
-        <li>Real Pokedex Simulator</li>
-        <li>Real-life Image Pokemon Recognition</li>
-        <li>PokeAPI Integration</li>
-        <li>Search and Filter Algorithm</li>
-        <li>Detailed Pokemon Data</li>
-        <li>User Accounts and Buddy Pokemon</li>
-        <li>Pokemon Region Map</li>
-        <li>Community Features</li>
-      </ul>
-    </main>
+      <div className="card-container">
+        <Card
+          title="Real Pokedex Simulator"
+          content="A fully interactive Pokedex simulation."
+          imageUrl="https://img.pokemondb.net/artwork/large/pikachu.jpg"
+        />
+        <Card
+          title="Real-Life Image Recognition"
+          content="Recognize Pokemon from real-life images."
+          imageUrl="https://img.pokemondb.net/artwork/large/bulbasaur.jpg"
+        />
+        <Card
+          title="PokeAPI Integration"
+          content="Retrieve detailed information from PokeAPI."
+          imageUrl="https://img.pokemondb.net/artwork/large/charizard.jpg"
+        />
+        {/* Add more cards as needed */}
+      </div>
+    </div>
   );
 };
 

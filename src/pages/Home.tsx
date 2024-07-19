@@ -1,11 +1,13 @@
+// src/pages/Home.tsx
 import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <main>
-      <h1>Welcome to the Pokedex Documentation</h1>
-      <p>This documentation provides a comprehensive guide to the Pokedex Simulator developed for the IEEE Hackathon.</p>
-    </main>
+    <div className="home-page">
+      <h1>Welcome to the Pokedex Simulator</h1>
+      <p>Explore various Pokemon and their details.</p>
+      {/* Additional content can be added here */}
+    </div>
   );
 };
 

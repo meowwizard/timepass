@@ -1,21 +1,20 @@
+// src/components/Header.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="header">
       <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/features">Features</Link></li>
-          <li><Link to="/technology-stack">Technology Stack</Link></li>
-          <li><Link to="/project-structure">Project Structure</Link></li>
-          <li><Link to="/setup-installation">Setup & Installation</Link></li>
-          <li><Link to="/component-breakdown">Component Breakdown</Link></li>
-          <li><Link to="/api-usage">API Usage</Link></li>
-          <li><Link to="/screenshots">Screenshots</Link></li>
-          <li><Link to="/conclusion">Conclusion</Link></li>
-        </ul>
+        <a href="/">Home</a>
+        <a href="/features">Features</a>
+        <a href="/technology-stack">Technology Stack</a>
+        <a href="/project-structure">Project Structure</a>
+        <a href="/setup-installation">Setup and Installation</a>
+        <a href="/component-breakdown">Component Breakdown</a>
+        <a href="/api-usage">API Usage</a>
+        <a href="/screenshots">Screenshots</a>
+        <a href="/conclusion">Conclusion</a>
       </nav>
     </header>
   );
