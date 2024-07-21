@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Pokedex Simulator. All rights reserved.</p>
+      <p>&copy; 2024 Pokedex IEEE hackathon. All rights reserved.</p>
     </footer>
   );
 };

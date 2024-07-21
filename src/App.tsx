@@ -3,8 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
+// import Sidebar from './components/Sidebar';
+import Home from './pages/Home'; 
 import Features from './pages/Features';
 import TechnologyStack from './pages/TechnologyStack';
 import ProjectStructure from './pages/ProjectStructure';
@@ -20,7 +20,7 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <div className="layout">
-        <Sidebar />
+        
         <main className="main-content">
           <Switch>
             <Route path="/" exact component={Home} />
