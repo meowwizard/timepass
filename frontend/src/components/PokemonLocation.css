@@ -6,7 +6,7 @@
 
 .pokemon-location h2 {
     font-size: 2em;
-    color: #ffcb05; /* Pokémon Yellow */
+    color: #ffcb05; 
 }
 
 .pokemon-location ul {
@@ -16,7 +16,7 @@
 
 .pokemon-location li {
     font-size: 1.2em;
-    color:black; /* Pokémon Blue */
+    color:black;
     font-weight: bold;
     margin: 5px 0;
 }

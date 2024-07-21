@@ -293,7 +293,7 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
         <div className="map-container">
             {pokemonRegion && <h2>{pokemonRegion} Region</h2>}
             {pokemonName && <h3>{pokemonName}</h3>}
-            {/* Render the map image based on the fetched region */}
+            
             {pokemonRegion && <img src={`/${pokemonRegion}_Map.png`} alt={`${pokemonRegion} Region Map`} className="map-image" />}
             {encounters.map((encounter, index) => {
                 const markerIcon = getMarkerIcon(encounter.location_area.name);

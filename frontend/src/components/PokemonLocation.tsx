@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './PokemonLocation.css'; // Optional: For custom styling
+import './PokemonLocation.css'; 
 
-// Define interfaces for the data
+
 interface LocationArea {
     name: string;
     url: string;
