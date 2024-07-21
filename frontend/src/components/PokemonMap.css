@@ -50,3 +50,17 @@
   opacity: 1; /* Fully visible */
   transform: translateY(-10px); /* Slight upward shift for better positioning */
 }
+
+.location_name{
+  
+  color: #FFFFFF; /* White text color for better visibility */
+  font-size: 14px; /* Adjust the font size */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  padding: 2px 6px; /* Add some padding around the text */
+  border-radius: 5px; /* Round the corners */
+  display: inline-block; /* Make it inline-block for better positioning */
+  transform: translate(-50%, -50%); /* Center the label */
+  white-space: nowrap; /* Prevent text wrapping */
+}

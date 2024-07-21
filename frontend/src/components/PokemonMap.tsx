@@ -9,7 +9,7 @@ interface LocationArea {
 
 interface Encounter {
     location_area: LocationArea;
-    version_details: any[];
+    version_details: unknown[];
 }
 
 interface PokemonDetails {
@@ -44,7 +44,6 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
                         const speciesResponse = await axios.get(response.data.species.url);
                         if (speciesResponse.data && speciesResponse.data.generation) {
                             setPokemonRegion(speciesResponse.data.generation.name);
-                        
                         }
                     }
                 } else {
@@ -60,7 +59,7 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
 
     const getMarkerIcon = (locationAreaName: string): string | null => {
         const markerIcons: { [key: string]: string } = {
-           'pallet-town-area': 'marker_icon.png',
+            'pallet-town-area': 'marker_icon.png',
             'viridian-city-area': '/public/marker_icon.png',
             'pewter-city-area': '/public/marker_icon.png',
             'cerulean-city-area': '/public/marker_icon.png',
@@ -173,45 +172,50 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
 
     const getHighlightStyle = (locationAreaName: string): { top: string; left: string } => {
         const locationStyles: { [key: string]: { top: string; left: string } } = {
-            // Generation 1 (Kanto)
-           'pallet-town-area': { top: '78%', left: '28%' },
-            'viridian-city-area': { top: '72%', left: '29%' },
-            'pewter-city-area': { top: '56%', left: '25%' },
-            'cerulean-city-area': { top: '17%', left: '61%' },
-            'vermillion-city-area': { top: '77%', left: '64%' },
-            'lavender-town-area': { top: '46%', left: '81%' },
-            'celadon-city-area': { top: '54%', left: '43%' },
-            'fuchsia-city-area': { top: '87%', left: '52%' },
-            'saffron-city-area': { top: '52%', left: '68%' },
-            'cinnabar-island-area': { top: '95%', left: '22%' },
+            'pallet-town-area': { top: '68%', left: '18%' },
+        
+           'viridian-city-area': { top: '75%', left: '7%' },
+        'pewter-city-area': { top: '20%', left: '18%' },
+        'cerulean-city-area': { top: '22%', left: '65%' },
+         'vermillion-city-area': { top: '74%', left: '27%' },
+        'lavender-town-area': { top: '49%', left: '39%' },
+        'celadon-city-area': { top: '56%', left: '20%' },
+        'fuchsia-city-area': { top: '86%', left: '31%' },
+        'saffron-city-area': { top: '56%', left: '29%' },
+        'cinnabar-island-area': { top: '97%', left: '7%' },
+        'power-plant-area': { top: '20%', left: '51%' },
+        'seafoam-islands-area': { top: '86%', left: '61%' },
+        'rock-tunnel-area': { top: '39%', left: '42%' },
+        'victory-road-area': { top: '7%', left: '23%' },
+        'pokemon-league-area': { top: '5%', left: '24%' },
             // Generation 2 (Johto)
-            'new-bark-town-area': { top: '84%', left: '94%' },
-            'cherrygrove-city-area': { top: '74%', left: '86%' },
-            'violet-city-area': { top: '59%', left: '74%' },
-            'azalea-town-area': { top: '69%', left: '52%' },
-            'goldenrod-city-area': { top: '69%', left: '64%' },
-            'ecruteak-city-area': { top: '53%', left: '64%' },
-            'olivine-city-area': { top: '53%', left: '49%' },
-            'cianwood-city-area': { top: '78%', left: '16%' },
-            'mahogany-town-area': { top: '34%', left: '79%' },
-            'blackthorn-city-area': { top: '32%', left: '93%' },
+         'new-bark-town': { top: '80%', left: '92%' },
+        'cherrygrove-city': { top: '75%', left: '84%' },
+        'violet-city': { top: '55%', left: '65%' },
+        'azalea-town': { top: '73%', left: '65%' },
+        'goldenrod-city': { top: '64%', left: '56%' },
+        'ecruteak-city': { top: '46%', left: '55%' },
+        'olivine-city': { top: '50%', left: '40%' },
+        'cianwood-city': { top: '67%', left: '25%' },
+        'mahogany-town': { top: '33%', left: '75%' },
+        'blackthorn-city': { top: '30%', left: '87%' },
             // Generation 3 (Hoenn)
             'littleroot-town-area': { top: '85%', left: '22%' },
-        'oldale-town-area': { top: '79%', left: '32%' },
-        'petalburg-city-area': { top: '72%', left: '25%' },
-        'rustboro-city-area': { top: '60%', left: '28%' },
-        'dewford-town-area': { top: '90%', left: '19%' },
-        'slateport-city-area': { top: '83%', left: '36%' },
-        'mauville-city-area': { top: '70%', left: '48%' },
-        'verdanturf-town-area': { top: '64%', left: '42%' },
-        'fallarbor-town-area': { top: '45%', left: '26%' },
-        'lavaridge-town-area': { top: '54%', left: '39%' },
-        'fortree-city-area': { top: '41%', left: '50%' },
-        'lilycove-city-area': { top: '58%', left: '69%' },
-        'mossdeep-city-area': { top: '50%', left: '87%' },
-        'sootopolis-city-area': { top: '66%', left: '66%' },
-        'pacifidlog-town-area': { top: '74%', left: '12%' },
-        'ever-grande-city-area': { top: '95%', left: '85%' },
+            'oldale-town-area': { top: '79%', left: '32%' },
+            'petalburg-city-area': { top: '72%', left: '25%' },
+            'rustboro-city-area': { top: '60%', left: '28%' },
+            'dewford-town-area': { top: '90%', left: '19%' },
+            'slateport-city-area': { top: '83%', left: '36%' },
+            'mauville-city-area': { top: '70%', left: '48%' },
+            'verdanturf-town-area': { top: '64%', left: '42%' },
+            'fallarbor-town-area': { top: '45%', left: '26%' },
+            'lavaridge-town-area': { top: '54%', left: '39%' },
+            'fortree-city-area': { top: '41%', left: '50%' },
+            'lilycove-city-area': { top: '58%', left: '69%' },
+            'mossdeep-city-area': { top: '50%', left: '87%' },
+            'sootopolis-city-area': { top: '66%', left: '66%' },
+            'pacifidlog-town-area': { top: '74%', left: '12%' },
+            'ever-grande-city-area': { top: '95%', left: '85%' },
             // Generation 4 (Sinnoh)
             'twinleaf-town-area': { top: '85%', left: '30%' },
             'sandgem-town-area': { top: '79%', left: '36%' },
@@ -232,7 +236,7 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
             'accumula-town-area': { top: '90%', left: '29%' },
             'striaton-city-area': { top: '83%', left: '40%' },
             'nacrene-city-area': { top: '76%', left: '48%' },
-            'castelia-city-area': { top: '40%', left: '68%' },
+            'castelia-city-area': { top: '70%', left: '68%' },
             'nimbasa-city-area': { top: '60%', left: '75%' },
             'driftveil-city-area': { top: '55%', left: '68%' },
             'mistralton-city-area': { top: '50%', left: '60%' },
@@ -240,8 +244,8 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
             'opelucid-city-area': { top: '40%', left: '58%' },
             'lacunosa-town-area': { top: '35%', left: '72%' },
             'undella-town-area': { top: '50%', left: '82%' },
-            'black-city-area': { top: '25%', left: '75%' },
-            'white-forest-area': { top: '20%', left: '78%' },
+            'black-city-area': { top: '25%', left: '70%' },
+            'white-forest-area': { top: '55%', left: '70%' },
             // Generation 6 (Kalos)
             'vaniville-town-area': { top: '85%', left: '40%' },
             'aquacorde-town-area': { top: '77%', left: '42%' },
@@ -284,7 +288,6 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
 
         return locationStyles[locationAreaName] || { top: '0', left: '0' };
     };
-    
 
     return (
         <div className="map-container">
@@ -297,12 +300,14 @@ const PokemonMap: React.FC<PokemonMapProps> = ({ pokemonId }) => {
                 const style = getHighlightStyle(encounter.location_area.name);
                 if (markerIcon) {
                     return (
-                        <img
-                            key={index}
-                            src={markerIcon}
-                            alt={encounter.location_area.name}
-                            style={{ position: 'absolute', top: style.top, left: style.left, width: '32px', height: '32px' }}
-                        />
+                        <div key={index} style={{ position: 'absolute', top: style.top, left: style.left, textAlign: 'center' }}>
+                            <img
+                                src={markerIcon}
+                                alt={encounter.location_area.name}
+                                style={{ width: '32px', height: '32px' }}
+                            />
+                            <div className="location_name">{encounter.location_area.name}</div>
+                        </div>
                     );
                 }
                 return null;

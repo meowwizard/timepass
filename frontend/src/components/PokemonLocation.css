@@ -16,6 +16,7 @@
 
 .pokemon-location li {
     font-size: 1.2em;
-    color: #3b4cca; /* Pokémon Blue */
+    color:black; /* Pokémon Blue */
+    font-weight: bold;
     margin: 5px 0;
 }
